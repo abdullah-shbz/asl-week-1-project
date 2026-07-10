@@ -38,24 +38,48 @@ class AdvanceCalculator:
         self.history.append(f"sqrt({a}) = {result:.3}") # Result will show upto 3 decimal places
         return round(result,3)      # Round off result to 3 decimal places
     
-    def sin(self, angle_degrees):
+    def sin(self, angle_degrees):      # SIN FUNCTION
         radians = math.radians(angle_degrees)
         result = math.sin(radians)
         self.history.append(f"sin({angle_degrees}°) = {result:.3f}") # Result will show upto 3 decimal places
         return round(result, 3)     # Round off result to 3 decimal places
     
-    def cos(self, angle_degrees):
+    def cos(self, angle_degrees):       # COS FUNCTION
         radians = math.radians(angle_degrees)
         result = math.cos(radians)
         self.history.append(f"cos({angle_degrees}°) = {result:.3f}") # Result will show upto 3 decimal places
         return round(result, 3)     # Round off result to 3 decimal places
     
-    def tan(self, angle_degrees):
+    def tan(self, angle_degrees):       # TAN FUNCTION
         radians = math.radians(angle_degrees)
         result = math.tan(radians)
         self.history.append(f"tan({angle_degrees}°) = {result:.3f}") # Result will show upto 3 decimal places
         return round(result, 3)     # Round off result to 3 decimal places
     
+    def quadratic_formula(self, a, b, c):   # QUADRATIC FORMULA FOR ROOTS
+        if a == 0:
+            return "Error: If 'a' is 0, it is not a quadratic equation!"
+            
+        discriminant = (b**2) - (4 * a * c)
+        
+        if discriminant < 0:
+            return "Complex roots (discriminant is negative)."
+            
+        root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        
+        self.history.append(f"Quadratic roots for {a}x^2 + {b}x + {c}: {root1:.2f}, {root2:.2f}")
+        return root1, root2
+    
+    def history(self):          # HISTORY OF ALL CALCULATIONS
+        print()
+        print("----- Calculation History -----")
+        if not self.history:
+            print("No calculations yet.")
+        else:
+            for item in self.history:
+                print(item)
+        print("----------------------")
     
     
     
