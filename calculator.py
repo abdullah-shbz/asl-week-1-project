@@ -23,8 +23,8 @@ class AdvanceCalculator:
         if b==0:
             return "Cannot divide by 0!"
         result = a/b
-        self.history.append(f"{a} / {b} = {result}")
-        return result
+        self.history.append(f"{a} / {b} = {result:.3f}")
+        return round(result,3) # Round off to 3
 
     def power(self,a,b):        # POWER
         result = a**b
@@ -35,7 +35,7 @@ class AdvanceCalculator:
         if a < 0:
             return "Cannot calculate square root of a negative number!"
         result = math.sqrt(a)
-        self.history.append(f"sqrt({a}) = {result:.3}") # Result will show upto 3 decimal places
+        self.history.append(f"sqrt({a}) = {result:.3f}") # Result will show upto 3 decimal places
         return round(result,3)      # Round off result to 3 decimal places
     
     def sin(self, angle_degrees):      # SIN FUNCTION
@@ -71,7 +71,7 @@ class AdvanceCalculator:
         self.history.append(f"Quadratic roots for {a}x^2 + {b}x + {c}: {root1:.2f}, {root2:.2f}")
         return root1, root2
     
-    def history(self):          # HISTORY OF ALL CALCULATIONS
+    def showhistory(self):          # HISTORY OF ALL CALCULATIONS
         print()
         print("----- Calculation History -----")
         if not self.history:
