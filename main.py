@@ -25,7 +25,7 @@ while True:
         
         # Non-math commands
     if choice == '0':
-        print("Exiting calculator. Great job this week, bro!")
+        print("Exiting calculator.")
         break
     elif choice == '11':    # Calculation History
         calc.showhistory()
