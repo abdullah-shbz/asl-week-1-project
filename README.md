@@ -1,10 +1,10 @@
-# 🚀 Advanced CLI Calculator
+# Advanced CLI Calculator
 
 This is a modular, interactive command-line calculator built in Python. It features robust error handling, an Object-Oriented math engine, and advanced functions like trigonometry and the quadratic formula. 
 
 Built as the Week 1 Mini Project for the Advance Soft Logics AI/ML Internship.
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 To run this project on your local machine, follow these steps:
 
@@ -22,7 +22,7 @@ To run this project on your local machine, follow these steps:
    python main.py
    ```
 
-## 💻 Usage
+## Usage
 
 Upon running `main.py`, you will be greeted with an interactive terminal menu. Type the number corresponding to the operation you wish to perform (0-11) and press Enter.
 
